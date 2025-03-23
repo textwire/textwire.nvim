@@ -29,6 +29,8 @@ local function create_query_file(filename, queries_dir)
 end
 
 M.load_highlights = function()
+    print("loading highlights...")
+
     local queries_dir = vim.fn.stdpath("config") .. "/queries/textwire"
 
     if is_dir(queries_dir) then
