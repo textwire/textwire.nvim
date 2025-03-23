@@ -1,7 +1,7 @@
 local M = {}
 
-M.setup = function()
-	print("Hello from Textwire")
+M.setup = function(opts)
+    print("Hello from Textwire setup")
 end
 
 return M
