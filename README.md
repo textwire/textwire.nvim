@@ -8,6 +8,6 @@ Create a file `textwire.lua` in your `/lua/plugins` directory inside neovim conf
 
 ```lua
 return {
-    "textwire/textwire.nvim"
+    "textwire/textwire.nvim",
 }
 ```
