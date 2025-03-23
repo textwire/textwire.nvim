@@ -13,5 +13,8 @@ return {
     dependencies = {
         "nvim-treesitter/nvim-treesitter",
     },
+    build = function()
+        require("textwire").load_highlights()
+    end,
 }
 ```
