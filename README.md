@@ -2,7 +2,7 @@
 Neovis plugin for Textwire syntax highlighting support.
 
 > [!NOTE]
-a Hopefully support for this parser will be upstreamed by editors soon. At the moment, it must be integrated manually.
+Hopefully support for this parser will be upstreamed by editors soon. At the moment, it must be integrated manually.
 
 ## Installation
 ### [lazy.nvim](https://github.com/folke/lazy.nvim)
