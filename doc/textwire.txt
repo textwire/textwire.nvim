@@ -1,16 +1,15 @@
 ================================================================================
-                                                               *textwire.nvim*
+INTRODUCTION                                                      textwire.nvim*
 
 This plugin adds support for syntax highlighting for Textwire
 templating language for Go.
 
 
-                                                  *textwire.load_highlights()*
-textwire.load_highlights()
-
+textwire.load_highlights()                          *textwire.load_highlights()*
     Fetch recent highlight files from GitHub and insert them into queries in
-    your Neovim's directory. >
+    your Neovim's directory.
 
-        textwire.load_highlights()
-
+    Usage:
+    >
+    textwire.load_highlights()
 <
