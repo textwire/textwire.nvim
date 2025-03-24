@@ -1,7 +1,8 @@
 # Textwire Neovim Plugin
-Neovim plugin for Textwire syntax highlighting support and autocompletions
+Neovis plugin for Textwire syntax highlighting support.
 
-> Hopefully support for this parser will be upstreamed by editors soon. At the moment, it must be integrated manually.
+> [!NOTE]
+a Hopefully support for this parser will be upstreamed by editors soon. At the moment, it must be integrated manually.
 
 ## Installation
 ### [lazy.nvim](https://github.com/folke/lazy.nvim)
