@@ -6,27 +6,27 @@ vim.filetype.add({
     },
 })
 
-vim.api.nvim_create_autocmd("VimEnter", {
+local lsp = require('lspconfig')
+
+-- Store the client ID to manage the server instance
+local textwire_client = nil
+
+-- LSP setup
+lsp.textwire.setup({
+    cmd = { '/Users/serhiichornenkyi/www/open/textwire/lsp/main' },
+    on_attach = function(client)
+        textwire_client = client.id
+    end,
+})
+
+-- Create autocmd to stop the server when Neovim exits
+vim.api.nvim_create_autocmd("VimLeavePre", {
     callback = function()
-        print("Start LSP server for Textwire")
-
-        local client = vim.lsp.start({
-            name = "textwirelsp",
-            cmd = { "/Users/serhiichornenkyi/www/open/textwire/lsp/main" },
-        })
-
-        local startLspServer = function()
-            if not client then
-                vim.notify("Textwire LSP Client error. Could not start", vim.log.levels.ERROR)
-                return
+        if textwire_client then
+            local client = vim.lsp.get_client_by_id(textwire_client)
+            if client then
+                client.stop()
             end
-
-            vim.lsp.buf_attach_client(0, client)
         end
-
-        vim.api.nvim_create_autocmd("FileType", {
-            pattern = "textwire",
-            callback = startLspServer,
-        })
     end,
 })
