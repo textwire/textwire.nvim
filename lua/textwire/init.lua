@@ -23,7 +23,7 @@ local function create_query_file(filename, queries_dir)
 
     file:close()
 
-    local url = "https://raw.githubusercontent.com/textwire/tree-sitter-textwire/refs/heads/main/queries/" .. filename
+    local url = "https://raw.githubusercontent.com/textwire/tree-sitter-textwire/refs/heads/master/queries/" .. filename
 
     vim.fn.system("wget " .. url .. " -O " .. full_filepath)
 end
