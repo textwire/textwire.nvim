@@ -6,14 +6,14 @@ vim.filetype.add({
     },
 })
 
-local lsp = require('lspconfig')
+local lsp = require("lspconfig")
 
 -- Store the client ID to manage the server instance
 local textwire_client = nil
 
 -- LSP setup
 lsp.textwire.setup({
-    cmd = { '/Users/serhiichornenkyi/www/open/textwire/lsp/main' },
+    cmd = { "/Users/serhiichornenkyi/www/open/textwire/lsp/main" },
     on_attach = function(client)
         textwire_client = client.id
     end,
