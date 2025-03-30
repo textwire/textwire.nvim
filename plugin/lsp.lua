@@ -17,6 +17,10 @@ lsp.textwire.setup({
     on_attach = function(client)
         textwire_client = client.id
     end,
+    -- Only start the server for Textwire files
+    filetypes = { "textwire" },
+    -- Prevent the server from starting automatically
+    autostart = false,
 })
 
 -- Create autocmd to stop the server when Neovim exits
