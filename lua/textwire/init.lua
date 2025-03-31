@@ -28,25 +28,16 @@ local function create_query_file(filename, queries_dir)
     vim.fn.system("wget " .. url .. " -O " .. full_filepath)
 end
 
-M.load_highlights = function()
-    local queries_dir = vim.fn.stdpath("config") .. "/queries/textwire"
+M.setup = function(opts)
+    opts = opts or {}
 
-    if is_dir(queries_dir) then
-        has_query_files = true
-    else
-        vim.fn.mkdir(queries_dir, "p")
+    if opts.highlights and opts.highlights.enabled then
+        require("textwire.highlights").load_highlights()
     end
 
-    for _, file in ipairs(query_files) do
-        create_query_file(file, queries_dir)
+    if opts.lsp and opts.lsp.enabled then
+        require("textwire.lsp").load_lsp()
     end
-
-    if has_query_files then
-        print("Highlighting files have been updated in", queries_dir)
-        return
-    end
-
-    print("Highlighting files have been installed into", queries_dir)
 end
 
 return M
