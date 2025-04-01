@@ -1,14 +1,6 @@
 local M = {}
 
 M.load_lsp = function()
-    -- Add file type detection for .tw and .tw.html
-    vim.filetype.add({
-        extension = {
-            tw = "textwire",
-            ["tw.html"] = "textwire",
-        },
-    })
-
     local lsp = require("lspconfig")
 
     -- Register the Textwire LSP server

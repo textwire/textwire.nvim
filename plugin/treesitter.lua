@@ -11,3 +11,11 @@ parser_config.textwire = {
         requires_generate_from_grammar = true,
     },
 }
+
+-- Add file type detection for .tw and .tw.html
+vim.filetype.add({
+    extension = {
+        tw = "textwire",
+        ["tw.html"] = "textwire",
+    },
+})

@@ -1,6 +1,6 @@
 local M = {}
 
-M.load_highlights = require("textwire.highlights").load_highlights
+M.load_highlights = require("textwire.load-highlights")
 
 M.setup = function(opts)
     opts = opts or require("textwire.default-config").default_config

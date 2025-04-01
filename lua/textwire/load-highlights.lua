@@ -1,6 +1,3 @@
-local M = {}
-
-local has_query_files = false
 local query_files = {
     "highlights.scm",
     "injections.scm",
@@ -28,7 +25,8 @@ local function create_query_file(filename, queries_dir)
     vim.fn.system("wget " .. url .. " -O " .. full_filepath)
 end
 
-M.load_highlights = function()
+return function()
+    local has_query_files = false
     local queries_dir = vim.fn.stdpath("config") .. "/queries/textwire"
 
     if is_dir(queries_dir) then
@@ -48,5 +46,3 @@ M.load_highlights = function()
 
     print("Highlighting files have been installed into", queries_dir)
 end
-
-return M
