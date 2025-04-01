@@ -11,6 +11,7 @@ Create a file `textwire.lua` in your `/lua/plugins` directory inside neovim conf
 ```lua
 return {
     "textwire/textwire.nvim",
+    version = "^0.0.3",
     dependencies = {
         "nvim-treesitter/nvim-treesitter",
     },

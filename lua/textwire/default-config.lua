@@ -1,5 +1,7 @@
-local M = {}
+local config = {}
 
-M.default_config = {}
+config.lsp = {
+    enabled = true,
+},
 
-return M
+return config
