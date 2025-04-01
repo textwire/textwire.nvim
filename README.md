@@ -13,7 +13,11 @@ return {
     "textwire/textwire.nvim",
     version = "^0.0.3",
     dependencies = {
+        "neovim/nvim-lspconfig",
         "nvim-treesitter/nvim-treesitter",
+    },
+    opts = {
+        -- list your options here
     },
     build = function()
         require("textwire").load_highlights()
@@ -25,18 +29,6 @@ return {
 > The `build` hook that loads highlights is needed to update highlights each time when we update the plugin. In the future we'll not need this block when this plugin will be a part Mason. We need at least 100 starts on [Textwire](https://github.com/textwire/textwire) repo to contribute to Mason
 
 ## Configurations
-```lua
-return {
-    "textwire/textwire.nvim",
-    dependencies = {
-        "nvim-treesitter/nvim-treesitter",
-    },
-    opts = {
-        -- list your options here
-    },
-}
-```
-
 ### Available Options
 - `lsp`
     - `enabled` [boolean] (Default: `true`) Set `false` to disable LSP server for Textwire which handles completions and hover information.
