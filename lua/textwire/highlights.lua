@@ -1,3 +1,5 @@
+local highlights = {}
+
 local query_files = {
     "highlights.scm",
     "injections.scm",
@@ -25,7 +27,9 @@ local function create_query_file(filename, queries_dir)
     vim.fn.system("wget " .. url .. " -O " .. full_filepath)
 end
 
-return function()
+--- Load the highlight for Textwire
+--- @return nil
+function highlights.load()
     local has_query_files = false
     local queries_dir = vim.fn.stdpath("config") .. "/queries/textwire"
 
@@ -46,3 +50,5 @@ return function()
 
     print("Highlighting files have been installed into", queries_dir)
 end
+
+return highlights

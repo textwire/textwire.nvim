@@ -1,3 +1,11 @@
+-- Add file type detection for .tw and .tw.html
+vim.filetype.add({
+    extension = {
+        tw = "textwire",
+        ["tw.html"] = "textwire",
+    },
+})
+
 local parser_config = require("nvim-treesitter.parsers").get_parser_configs()
 
 parser_config.textwire = {
@@ -12,10 +20,4 @@ parser_config.textwire = {
     },
 }
 
--- Add file type detection for .tw and .tw.html
-vim.filetype.add({
-    extension = {
-        tw = "textwire",
-        ["tw.html"] = "textwire",
-    },
-})
+require("textwire.lsp").attach()
