@@ -11,13 +11,11 @@ Create a file `textwire.lua` in your `/lua/plugins` directory inside neovim conf
 ```lua
 return {
     "textwire/textwire.nvim",
-    version = "^0.0.3",
     dependencies = {
-        "neovim/nvim-lspconfig",
         "nvim-treesitter/nvim-treesitter",
     },
     build = function()
-        require("textwire").load_highlights()
+        require("textwire").build()
     end,
 }
 ```
