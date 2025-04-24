@@ -4,6 +4,7 @@ CHANGELOG                                                   *textwire.changelog*
                                                           *textwire.changelog-1*
 
 Date: April 24, 2025
+Version: 0.0.4
 PR: https://github.com/textwire/textwire.nvim/pull/1
 
 Contributions:
@@ -13,6 +14,7 @@ Contributions:
                                                           *textwire.changelog-2*
 
 Date: April 24, 2025
+Version: 0.0.5
 PR: https://github.com/textwire/textwire.nvim/pull/2
 
 Contributions:
@@ -22,6 +24,7 @@ Contributions:
                                                           *textwire.changelog-3*
 
 Date: April 24, 2025
+Version: 0.0.6
 PR: https://github.com/textwire/textwire.nvim/pull/2
 
 Contributions:
