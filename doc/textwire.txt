@@ -1,15 +1,45 @@
 ================================================================================
-INTRODUCTION                                                      textwire.nvim*
+INTRODUCTION                                                     *textwire.nvim*
 
-This plugin adds support for syntax highlighting for Textwire
-templating language for Go.
+This plugin adds support for syntax highlighting and LSP features such as
+autocomplete and hover for Textwire file in Neovim. It uses the
+Textwire LSP binary to provide LSP features and tree-sitter for syntax
+highlighting.
 
+  :h textwire
+  :h textwire.changelog
 
-textwire.load_highlights()                          *textwire.load_highlights()*
+textwire.load_highlights() DEPRECATED               *textwire.load_highlights()*
     Fetch recent highlight files from GitHub and insert them into queries in
     your Neovim's directory.
+
+    THIS FUNCTION IS DEPRECATED AND WILL BE REMOVED IN THE VERSION 1.0.0!
+    USE textwire.build() INSTEAD!
 
     Usage:
     >
     textwire.load_highlights()
 <
+
+textwire.build()                                              *textwire.build()*
+    Fetch recent highlight files from GitHub and insert them into queries in
+    your Neovim's directory. Also it will download the LSP binary and install it
+    locally to get LSP features for Textwire such as completion and hover.
+
+    Usage:
+    >
+    textwire.build()
+<
+
+================================================================================
+COMMANDS                                                     *textwire.commands*
+
+Below you can find the list of available commands for this plugin.
+
+:TextwireInstallLsp                                        *textwire.lsp.load()*
+    Install the Textwire LSP binary to your local machine depending on your
+    operating system. This command will run automatically on update of your
+    plugin if you have `require("textwire").build()` in your `build` callback.
+    Running this command will fetch the latest version of the LSP binary from
+    GitHub and download it to your machine to the Neovim directory depending on
+    your operating system.
