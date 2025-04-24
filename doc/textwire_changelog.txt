@@ -1,0 +1,29 @@
+================================================================================
+CHANGELOG                                                   *textwire.changelog*
+
+                                                          *textwire.changelog-1*
+
+Date: April 24, 2025
+PR: https://github.com/textwire/textwire.nvim/pull/1
+
+Contributions:
+1. Changed the way you setup the plugin.
+2. Added LSP support with autocomplete and hover feature.
+
+                                                          *textwire.changelog-2*
+
+Date: April 24, 2025
+PR: https://github.com/textwire/textwire.nvim/pull/2
+
+Contributions:
+1. Added deprecated warning for `require("textwire").load_highlights()` usage
+
+
+                                                          *textwire.changelog-3*
+
+Date: April 24, 2025
+PR: https://github.com/textwire/textwire.nvim/pull/2
+
+Contributions:
+1. Added more information to `:h textwire` command.
+2. Added `h textwire.changelog` command with the release notes.
