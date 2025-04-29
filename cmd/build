@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+git_status=$(git status --porcelain)
+
+if [[ -n "$git_status" ]]; then
+    echo "❌ Cannot build until there are no uncommitted changes"
+    exit 1
+fi
+
+query_files=("highlights.csm" "injections.csm")
