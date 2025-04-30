@@ -27,8 +27,8 @@ If you already installed `textwire.nvim` plugin before `March 30 2025`, please a
 After that, you can remove `branch = "master"` from your `textwire.lua` file and next updates will be done automatically.
 
 ## Contributing
-When you are contributing to this plugin, please make sure that you are running the `cmd/build.lua` script that will download LSP binaries and treesitter highlights. You can run it with the following command:
+When you are contributing to this plugin, please make sure that you are running the `cmd/download` bash script that will download LSP binaries and treesitter highlights. You can run it with the following command:
 
 ```bash
-lua ./cmd/build.lua
+./cmd/download
 ```
