@@ -8,7 +8,7 @@ if [[ -n "$git_status" ]]; then
     exit 1
 fi
 
-query_files=("highlights.csm" "injections.csm")
+query_files=("highlights.scm" "injections.scm")
 
 # Download the latest CSM files
 for query_file in "${query_files[@]}"; do
@@ -17,6 +17,11 @@ for query_file in "${query_files[@]}"; do
 
     # Get the content of the file
     file_content=$(curl -s "$url")
+
+    if [[ "$file_content" == *"404 Not Found"* ]]; then
+        echo "❌ $url not found"
+        exit 1
+    fi
 
     # Update/create the destination file
     if [[ -n "$file_content" ]]; then
