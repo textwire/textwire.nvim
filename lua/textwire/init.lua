@@ -2,7 +2,7 @@ local textwire = {}
 
 local deprecation_msg = [[
 textwire.load_highlights() is deprecated and will be removed in the next major
-version update. Use textwire.build() instead.
+version update. Use textwire.nuild() instead.
 
 Go into your plugins/textwire.lua config file and rename load_highlights()
 to build() to hide this warning message.
@@ -12,7 +12,7 @@ to build() to hide this warning message.
 --- @return nil
 --- @deprecated This function is deprecated. Use `textwire.build()` instead.
 function textwire.load_highlights()
-	require("textwire.highlights").load()
+	require("textwire.highlights").move()
 
 	vim.notify(deprecation_msg, vim.log.levels.WARN, {
 		title = "Deprecation Warning",
@@ -20,11 +20,10 @@ function textwire.load_highlights()
 	})
 end
 
---- Load and install LSP server for Textwire.
+--- Install proper highlights for Textwire
 --- @return nil
 function textwire.build()
-	require("textwire.highlights").load()
-	require("textwire.lsp").load()
+	require("textwire.highlights").refresh_files()
 end
 
 return textwire

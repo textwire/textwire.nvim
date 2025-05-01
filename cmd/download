@@ -8,4 +8,5 @@ if [[ -n "$git_status" ]]; then
     exit 1
 fi
 
-query_files=("highlights.csm" "injections.csm")
+./scripts/download_queries
+./scripts/download_lsp

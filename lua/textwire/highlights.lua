@@ -1,54 +1,31 @@
 local highlights = {}
 
-local query_files = {
-    "highlights.scm",
-    "injections.scm",
-}
+local utils = require("textwire.utils")
 
-local function is_dir(dir)
-    return vim.fn.isdirectory(dir) ~= 0
-end
-
-local function create_query_file(filename, queries_dir)
-    local full_filepath = queries_dir .. "/" .. filename
-
-    -- Create target file locally
-    local file = io.open(full_filepath, "w")
-
-    if not file then
-        print("Can't create a file: " .. full_filepath)
-        return
-    end
-
-    file:close()
-
-    local url = "https://raw.githubusercontent.com/textwire/tree-sitter-textwire/refs/heads/master/queries/" .. filename
-
-    vim.fn.system("wget " .. url .. " -O " .. full_filepath)
-end
-
---- Load the highlight for Textwire
+--- Move highlight files from the plugin directory to the user's config.
 --- @return nil
-function highlights.load()
-    local has_query_files = false
-    local queries_dir = vim.fn.stdpath("config") .. "/queries/textwire"
+function highlights.refresh_files()
+	local queries_dir = utils.plugin_path() .. "/queries"
+	local dest_dir = vim.fn.stdpath("config") .. "/queries/textwire"
 
-    if is_dir(queries_dir) then
-        has_query_files = true
-    else
-        vim.fn.mkdir(queries_dir, "p")
-    end
+	if not utils.is_dir(dest_dir) then
+		vim.fn.mkdir(dest_dir, "p")
+	end
 
-    for _, file in ipairs(query_files) do
-        create_query_file(file, queries_dir)
-    end
+	local files = vim.fn.globpath(queries_dir, "*", 0, 1)
 
-    if has_query_files then
-        print("Highlighting files have been updated in", queries_dir)
-        return
-    end
+	-- Copy files from queries_dir to dest_dir
+	for _, file in ipairs(files) do
+		local file_name = vim.fn.fnamemodify(file, ":t")
+		local dest_file = dest_dir .. "/" .. file_name
 
-    print("Highlighting files have been installed into", queries_dir)
+		-- Delete the file if it already exists
+		if vim.fn.filereadable(dest_file) then
+			vim.fn.delete(dest_file)
+		end
+
+		vim.fn.system({ "cp", file, dest_file })
+	end
 end
 
 return highlights
