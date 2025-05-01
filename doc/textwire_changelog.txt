@@ -25,8 +25,17 @@ Contributions:
 
 Date: April 24, 2025
 Version: 0.0.6
-PR: https://github.com/textwire/textwire.nvim/pull/2
+PR: https://github.com/textwire/textwire.nvim/pull/3
 
 Contributions:
 1. Added more information to `:h textwire` command.
 2. Added `h textwire.changelog` command with the release notes.
+
+                                                          *textwire.changelog-4*
+
+Date: May 1, 2025
+Version: 0.1.0
+PR: https://github.com/textwire/textwire.nvim/pull/4
+
+Contributions:
+1. Now plugin contains LSP binaries and highlights. Before, you needed curl to download them
