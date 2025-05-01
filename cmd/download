@@ -9,3 +9,4 @@ if [[ -n "$git_status" ]]; then
 fi
 
 ./scripts/download_queries
+./scripts/download_lsp

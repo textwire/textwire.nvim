@@ -26,3 +26,5 @@ for file_name in "${file_names[@]}"; do
         exit 1
     fi
 done
+
+echo "✅ All CSM query files are downloaded and updated"
