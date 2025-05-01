@@ -12,19 +12,18 @@ to build() to hide this warning message.
 --- @return nil
 --- @deprecated This function is deprecated. Use `textwire.build()` instead.
 function textwire.load_highlights()
-	require("textwire.highlights").load()
+    require("textwire.highlights").move()
 
-	vim.notify(deprecation_msg, vim.log.levels.WARN, {
-		title = "Deprecation Warning",
-		timeout = 10000,
-	})
+    vim.notify(deprecation_msg, vim.log.levels.WARN, {
+        title = "Deprecation Warning",
+        timeout = 10000,
+    })
 end
 
---- Load and install LSP server for Textwire.
+--- Install proper highlights for Textwire
 --- @return nil
 function textwire.build()
-	require("textwire.highlights").load()
-	require("textwire.lsp").load()
+    require("textwire.highlights").move()
 end
 
 return textwire
