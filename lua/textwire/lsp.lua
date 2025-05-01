@@ -2,10 +2,6 @@ local lsp = {}
 
 local utils = require("textwire.utils")
 
-vim.api.nvim_create_user_command("TextwireInstallLsp", function()
-    lsp.load()
-end, {})
-
 -- Function to get the file path for the LSP binary, directory and
 -- destination URL.
 --
@@ -40,13 +36,6 @@ function lsp.attach()
         pattern = "textwire",
         callback = function()
             local lsp_bin = lsp_path()
-
-            if vim.fn.filereadable(lsp_bin) == 0 then
-                vim.schedule(function()
-                    print("Textwire LSP binary not found. Please run :TextwireInstallLsp to install it")
-                end)
-                return
-            end
 
             -- Force continuous completion
             vim.bo.completeopt = "menu,menuone,noselect,noinsert"

@@ -31,15 +31,3 @@ textwire.build()                                              *textwire.build()*
     textwire.build()
 <
 
-================================================================================
-COMMANDS                                                     *textwire.commands*
-
-Below you can find the list of available commands for this plugin.
-
-:TextwireInstallLsp                                        *textwire.lsp.load()*
-    Install the Textwire LSP binary to your local machine depending on your
-    operating system. This command will run automatically on update of your
-    plugin if you have `require("textwire").build()` in your `build` callback.
-    Running this command will fetch the latest version of the LSP binary from
-    GitHub and download it to your machine to the Neovim directory depending on
-    your operating system.
