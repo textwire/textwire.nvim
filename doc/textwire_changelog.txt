@@ -39,3 +39,13 @@ PR: https://github.com/textwire/textwire.nvim/pull/4
 
 Contributions:
 - Now plugin contains LSP binaries and highlights. Before, you needed curl to download them
+
+                                                          *textwire.changelog-5*
+
+Date: May 2, 2025
+Version: 0.1.1
+PR: https://github.com/textwire/textwire.nvim/pull/5
+
+Contributions:
+- Changed tabs to spaces for consistency.
+- Removed `TextwireInstallLsp` command since we no longer need it.
