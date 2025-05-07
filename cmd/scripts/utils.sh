@@ -1,10 +1,14 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-is_jq_installed() {
-    if command -v jq >/dev/null 2>&1; then
-        return 0 # success
-    fi
+get_json_field_value() {
+    local json="$1"
+    local key="$2"
 
-    return 1 # failure
+    if [[ "$json" =~ \"$key\"[[:space:]]*\:[[:space:]]*\"([^\"]*)\" ]]; then
+        echo "${BASH_REMATCH[1]}"
+    else
+        echo "" >&2
+        return 1
+    fi
 }

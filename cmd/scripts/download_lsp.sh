@@ -3,23 +3,18 @@ set -euo pipefail
 
 source ./cmd/scripts/utils.sh
 
-if ! is_jq_installed; then
-    echo "❌ Error: jq is required but not installed." >&2
-    exit 1
-fi
-
 echo "⏰ Checking LSP binary build version..."
 
 LATEST_RELEASE_URL="https://api.github.com/repos/textwire/lsp/releases/latest"
 
 latest_release=$(curl -s "$LATEST_RELEASE_URL")
 
-new_tag=$(echo "$latest_release" | jq -r '.tag_name')
+new_tag=$(get_json_field_value "$latest_release" "tag_name")
 old_tag=$(cat ./bin/.latest-tag)
 
 if [[ "$new_tag" == "$old_tag" ]]; then
     echo "✅ The LSP binaries are up-to-date"
-    exit 1
+    exit 0
 fi
 
 version=("${new_tag#v}")
@@ -34,7 +29,7 @@ file_names=(
     "lsp_${version}_linux_amd64.tar.gz"
     "lsp_${version}_windows_386.tar.gz"
     "lsp_${version}_windows_amd64.tar.gz"
-    "lsp_${version}_windows_amr64.tar.gz"
+    "lsp_${version}_windows_arm64.tar.gz"
 )
 
 for file_name in "${file_names[@]}"; do
