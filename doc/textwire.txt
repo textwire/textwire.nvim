@@ -7,7 +7,6 @@ Textwire LSP binary to provide LSP features and tree-sitter for syntax
 highlighting.
 
   :h textwire
-  :h textwire.changelog
 
 textwire.load_highlights() DEPRECATED               *textwire.load_highlights()*
     Fetch recent highlight files from GitHub and insert them into queries in
