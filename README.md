@@ -1,5 +1,5 @@
 # Textwire Neovim Plugin
-Neovis plugin for Textwire syntax highlighting support.
+Neovim plugin for Textwire syntax highlighting support.
 
 > [!NOTE]
 Hopefully support for this parser will be upstreamed by editors soon. At the moment, it must be integrated manually.
@@ -14,9 +14,9 @@ return {
     dependencies = {
         "nvim-treesitter/nvim-treesitter",
     },
-	build = function()
-		require("textwire").build()
-	end,
+    build = function()
+        require("textwire").build()
+    end,
 }
 ```
 
@@ -30,7 +30,7 @@ If you already installed `textwire.nvim` plugin before `March 30 2025`, please a
 After that, you can remove `branch = "master"` from your `textwire.lua` file and next updates will be done automatically.
 
 ## Contributing
-When you are contributing to this plugin, please make sure that you are running the `cmd/download` bash script that will download LSP binaries and treesitter highlights into `bin` and `queries` directories. You can run it with the following command:
+When you are contributing to this plugin, please make sure that you are running the `cmd/download` bash script that will download LSP binary for Windows (because Windows is shit) and treesitter highlights into `bin` and `queries` directories. You can run it with the following command:
 
 ```bash
 ./cmd/download
