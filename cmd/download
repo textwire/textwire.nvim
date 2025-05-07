@@ -8,5 +8,5 @@ if [[ -n "$git_status" ]]; then
     exit 1
 fi
 
-./scripts/download_queries
-./scripts/download_lsp
+./cmd/scripts/download_lsp.sh
+./cmd/scripts/download_queries.sh
