@@ -32,6 +32,13 @@ file_names=(
     "lsp_${version}_windows_arm64.tar.gz"
 )
 
+remove_unused_files() {
+    rm "$1" > /dev/null 2>&1
+    rm bin/README.md > /dev/null 2>&1
+    rm bin/LICENSE > /dev/null 2>&1
+    rm bin/CHANGELOG.md > /dev/null 2>&1
+}
+
 for file_name in "${file_names[@]}"; do
     echo "$DIVIDER"
 
@@ -65,10 +72,7 @@ for file_name in "${file_names[@]}"; do
 
     echo "⏰ Deleting unnecessary files.."
 
-    rm "$dest" > /dev/null 2>&1
-    rm bin/README.md > /dev/null 2>&1
-    rm bin/LICENSE > /dev/null 2>&1
-    rm bin/CHANGELOG.md > /dev/null 2>&1
+    remove_unused_files "$dest"
 
     bin_name="textwire_${file_name/0.1.0_/}"
     bin_name="${bin_name/.tar.gz/}"
