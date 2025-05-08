@@ -56,7 +56,8 @@ for file_name in "${file_names[@]}"; do
     echo "⏰ Downloading $file_name..."
 
     # Download a file with curl
-    curl -L -o "$dest" "$url" > /dev/null 2>&1
+    curl -L -o "$dest" "$url" > /dev/null 2>&1 &
+    show_spinner
 
     echo "⏰ Unpacking $file_name..."
 
