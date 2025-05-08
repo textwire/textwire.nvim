@@ -5,6 +5,7 @@ source ./cmd/scripts/utils.sh
 
 echo "⏰ Checking LSP binary build version..."
 
+DIVIDER="-----------------------------------------------------------------"
 LATEST_RELEASE_URL="https://api.github.com/repos/textwire/lsp/releases/latest"
 
 latest_release=$(curl -s "$LATEST_RELEASE_URL")
@@ -20,7 +21,6 @@ fi
 version=("${new_tag#v}")
 
 echo "✅ New LSP version $version found"
-echo "⏰ Downloading LSP binaries version $version..."
 
 file_names=(
     "lsp_${version}_darwin_amd64.tar.gz"
@@ -33,6 +33,8 @@ file_names=(
 )
 
 for file_name in "${file_names[@]}"; do
+    echo "$DIVIDER"
+
     url="https://github.com/textwire/lsp/releases/download/$new_tag/$file_name"
     dest="bin/$file_name"
 
@@ -51,16 +53,45 @@ for file_name in "${file_names[@]}"; do
         continue
     fi
 
+    echo "⏰ Downloading $file_name..."
+
     # Download a file with curl
-    curl -o "$dest" "$url" > /dev/null 2>&1
+    curl -L -o "$dest" "$url" > /dev/null 2>&1
+
+    echo "⏰ Unpacking $file_name..."
+
+    tar -xzf "$dest" -C bin
+
+    echo "⏰ Deleting unnecessary files.."
+
+    rm "$dest" > /dev/null 2>&1
+    rm bin/README.md > /dev/null 2>&1
+    rm bin/LICENSE > /dev/null 2>&1
+    rm bin/CHANGELOG.md > /dev/null 2>&1
+
+    bin_name="textwire_${file_name/0.1.0_/}"
+    bin_name="${bin_name/.tar.gz/}"
+    old_bin_dest="bin/lsp"
+
+    # Add .exe to the Windows binaries
+    if [[ "$bin_name" == *"windows"* ]]; then
+        bin_name="${bin_name}.exe"
+        old_bin_dest="bin/lsp.exe"
+    fi
+
+    bin_dest="bin/$bin_name"
+
+    # Rename binary file
+    mv "$old_bin_dest" "$bin_dest"
 
     # Make the file executable
-    chmod +x "$dest"
+    chmod +x "$bin_dest"
 
-    echo "✅ Downloaded $file_name"
+    echo "✅ LSP $bin_name installed to the bin directory"
 done
 
 # Update the latest tag
 echo "$new_tag" > bin/.latest-tag
 
+echo "$DIVIDER"
 echo "✅ All LSP binaries are downloaded and updated"
