@@ -2,7 +2,7 @@ local lsp = {}
 
 local utils = require("textwire.utils")
 
----@return string
+--- @return string
 local function binary_ext()
     if vim.loop.os_uname().sysname == "Windows_NT" then
         return ".exe"
@@ -11,7 +11,7 @@ local function binary_ext()
     return ""
 end
 
----@return string
+--- @return string
 local function arch_name()
     local arch = vim.loop.os_uname().machine:lower()
 
@@ -28,7 +28,7 @@ local function arch_name()
     return "amd64"
 end
 
----@return string
+--- @return string
 local function platform_name()
     local platform = vim.loop.os_uname().sysname
 
