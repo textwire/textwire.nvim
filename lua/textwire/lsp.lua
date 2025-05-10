@@ -30,17 +30,17 @@ end
 
 ---@return string
 local function platform_name()
-    local os = vim.loop.os_uname().sysname
+    local platform = vim.loop.os_uname().sysname
 
-    if os == "Darwin" then
+    if platform == "Darwin" then
         return "darwin"
-    elseif os == "Linux" then
+    elseif platform == "Linux" then
         return "linux"
-    elseif os == "Windows_NT" then
+    elseif platform == "Windows_NT" then
         return "windows"
     end
 
-    vim.notify("Unsupported platform: " .. os, vim.log.levels.WARN)
+    vim.notify("Unsupported platform: " .. platform, vim.log.levels.WARN)
 
     return "linux"
 end

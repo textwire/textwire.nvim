@@ -1,7 +1,7 @@
 # Release Notes
 
-## 0.2.0 (2025-05-07)
-- Changed installing LSP logic
+## 0.2.0 (2025-05-10)
+- Changed installing LSP binaries logic
 
 ## v0.1.1 (2025-05-02)
 - Changed tabs to spaces for consistency.
