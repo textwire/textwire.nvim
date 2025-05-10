@@ -1,5 +1,5 @@
 # Textwire Neovim Plugin
-Neovis plugin for Textwire syntax highlighting support.
+Neovim plugin for Textwire syntax highlighting support.
 
 > [!NOTE]
 Hopefully support for this parser will be upstreamed by editors soon. At the moment, it must be integrated manually.
@@ -14,9 +14,9 @@ return {
     dependencies = {
         "nvim-treesitter/nvim-treesitter",
     },
-	build = function()
-		require("textwire").build()
-	end,
+    build = function()
+        require("textwire").build()
+    end,
 }
 ```
 
