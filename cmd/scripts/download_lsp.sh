@@ -20,7 +20,7 @@ fi
 
 version=("${new_tag#v}")
 
-echo "✅ New LSP version $version found"
+echo "✅ New LSP version $version found. Downloading..."
 
 file_names=(
     "lsp_${version}_darwin_amd64.tar.gz"
