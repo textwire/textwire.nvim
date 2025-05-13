@@ -74,7 +74,7 @@ for file_name in "${file_names[@]}"; do
 
     remove_unused_files "$dest"
 
-    bin_name="textwire_${file_name/0.1.0_/}"
+    bin_name="textwire_${file_name/${version}_/}"
     bin_name="${bin_name/.tar.gz/}"
     old_bin_dest="bin/lsp"
 
