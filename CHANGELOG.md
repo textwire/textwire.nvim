@@ -1,5 +1,8 @@
 # Release Notes
 
+## 0.4.0 (2025-05-31)
+- Updated the LSP version to the latest `0.2.0`
+
 ## 0.3.1 (2025-05-13)
 - Fixed incorrect bash script for updating LSP binaries
 
