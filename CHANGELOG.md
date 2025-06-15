@@ -1,5 +1,8 @@
 # Release Notes
 
+## 0.5.0 (2025-06-15)
+- Updated the LSP version to the latest `0.3.0`
+
 ## 0.4.0 (2025-05-31)
 - Updated the LSP version to the latest `0.2.0`
 
