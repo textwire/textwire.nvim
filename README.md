@@ -1,7 +1,7 @@
 # Textwire Neovim Plugin
 Neovim plugin for Textwire syntax highlighting support.
 
-> [!NOTE] Give us a Star
+> [!NOTE]
 > Hopefully support for this parser will be upstreamed by editors soon. At the moment, it must be integrated manually. In the future we'll not need this block when this plugin will be a part Mason. **We need at least 100 starts** on [Textwire](https://github.com/textwire/textwire) repository to contribute to Mason
 
 ## Installation
