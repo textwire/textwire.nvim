@@ -1,5 +1,8 @@
 # Release Notes
 
+## 1.0.0 (2025-08-11)
+- BREAKING CHANGE: Removed `load_highlights` function. Use `build` instead
+
 ## 0.5.0 (2025-06-15)
 - Updated the LSP version to the latest `0.3.0`
 
