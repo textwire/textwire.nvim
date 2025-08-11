@@ -6,7 +6,8 @@ vim.filetype.add({
     },
 })
 
-local parser_config = require("nvim-treesitter.parsers").get_parser_configs()
+local parser_config = require("nvim-treesitter.parsers")
+    .get_parser_configs()
 
 parser_config.textwire = {
     install_info = {
@@ -18,6 +19,7 @@ parser_config.textwire = {
         -- if directory contains pre-generated src/parser.c
         requires_generate_from_grammar = true,
     },
+    filetype = "textwire",
 }
 
 require("textwire.lsp").attach()
