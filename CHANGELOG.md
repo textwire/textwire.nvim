@@ -1,5 +1,8 @@
 # Release Notes
 
+## 1.1.0 (2025-11-08)
+- Updated LSP to the latest version [v0.4.0](https://github.com/textwire/lsp/pull/7).
+
 ## 1.0.0 (2025-08-11)
 - BREAKING CHANGE: Removed `load_highlights` function. Use `build` instead
 - Added more information to `README.md` file
