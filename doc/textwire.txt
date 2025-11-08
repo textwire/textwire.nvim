@@ -8,18 +8,6 @@ highlighting.
 
   :h textwire
 
-textwire.load_highlights() DEPRECATED               *textwire.load_highlights()*
-    Fetch recent highlight files from GitHub and insert them into queries in
-    your Neovim's directory.
-
-    THIS FUNCTION IS DEPRECATED AND WILL BE REMOVED IN THE VERSION 1.0.0!
-    USE textwire.build() INSTEAD!
-
-    Usage:
-    >
-    textwire.load_highlights()
-<
-
 textwire.build()                                              *textwire.build()*
     Fetch recent highlight files from GitHub and insert them into queries in
     your Neovim's directory. Also it will download the LSP binary and install it
