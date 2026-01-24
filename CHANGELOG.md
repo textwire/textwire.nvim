@@ -1,5 +1,8 @@
 # Release Notes
 
+## 1.1.1 (2026-01-24)
+- Added autoupdate treesitter everytime when you update this plugin.
+
 ## 1.1.0 (2025-11-08)
 - Updated LSP to the latest version [v0.4.0](https://github.com/textwire/lsp/pull/7).
 
