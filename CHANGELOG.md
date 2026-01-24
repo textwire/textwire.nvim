@@ -1,28 +1,28 @@
 # Release Notes
 
-## 1.1.1 (2026-01-24)
+## v1.1.1 (2026-01-24)
 - Added autoupdate treesitter everytime when you update this plugin.
 
-## 1.1.0 (2025-11-08)
+## v1.1.0 (2025-11-08)
 - Updated LSP to the latest version [v0.4.0](https://github.com/textwire/lsp/pull/7).
 
-## 1.0.0 (2025-08-11)
+## v1.0.0 (2025-08-11)
 - BREAKING CHANGE: Removed `load_highlights` function. Use `build` instead.
 - Added more information to `README.md` file.
 
-## 0.5.0 (2025-06-15)
+## v0.5.0 (2025-06-15)
 - Updated LSP to the latest version [v0.3.0](https://github.com/textwire/lsp/pull/6).
 
-## 0.4.0 (2025-05-31)
+## v0.4.0 (2025-05-31)
 - Updated LSP to the latest version [v0.2.0](https://github.com/textwire/lsp/pull/5).
 
-## 0.3.1 (2025-05-13)
+## v0.3.1 (2025-05-13)
 - Fixed incorrect bash script for updating LSP binaries.
 
-## 0.3.0 (2025-05-13)
+## v0.3.0 (2025-05-13)
 - Updated LSP to the latest version [v0.1.1](https://github.com/textwire/lsp/pull/3).
 
-## 0.2.0 (2025-05-10)
+## v0.2.0 (2025-05-10)
 - Changed installing LSP binaries logic.
 
 ## v0.1.1 (2025-05-02)
