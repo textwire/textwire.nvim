@@ -1,5 +1,9 @@
 # Release Notes
 
+## v1.2.0 (2026-02-14)
+
+- Updated LSP to the latest version v0.4.1
+
 ## v1.1.1 (2026-01-24)
 
 - Added autoupdate treesitter everytime when you update this plugin.
