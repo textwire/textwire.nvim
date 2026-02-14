@@ -65,6 +65,8 @@ function lsp.attach()
         pattern = "textwire",
         callback = function()
             local lsp_bin = lsp_path()
+            -- Below is for debugging locally
+            -- local lsp_bin = "/home/serhii/www/open/textwire/lsp/main"
 
             -- Force continuous completion
             vim.bo.completeopt = "menu,menuone,noselect,noinsert"
