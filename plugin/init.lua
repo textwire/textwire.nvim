@@ -22,4 +22,5 @@ parser_config.textwire = {
     filetype = "textwire",
 }
 
+require("textwire.icon").set_icon()
 require("textwire.lsp").attach()
