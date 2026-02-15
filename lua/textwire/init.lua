@@ -7,11 +7,6 @@ function M.build()
     pcall(function()
         require("textwire.highlights").refresh_files()
     end)
-
-    -- Safely update treesitter parser
-    pcall(function()
-        require("nvim-treesitter.install").update({ "textwire" })
-    end)
 end
 
 return M
