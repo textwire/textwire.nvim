@@ -1,4 +1,4 @@
-local lsp = {}
+local M = {}
 
 local utils = require("textwire.utils")
 
@@ -60,7 +60,7 @@ end
 
 -- Function to attach the LSP to the current buffer.
 --- @return nil
-function lsp.attach()
+function M.attach()
     vim.api.nvim_create_autocmd("FileType", {
         pattern = "textwire",
         callback = function()
@@ -84,4 +84,4 @@ function lsp.attach()
     })
 end
 
-return lsp
+return M

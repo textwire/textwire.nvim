@@ -1,8 +1,8 @@
-local textwire = {}
+local M = {}
 
 --- Install proper highlights for Textwire and update treesitter
 --- @return nil
-function textwire.build()
+function M.build()
     -- Safely update query files for syntax highlight
     pcall(function()
         require("textwire.highlights").refresh_files()
@@ -14,4 +14,4 @@ function textwire.build()
     end)
 end
 
-return textwire
+return M

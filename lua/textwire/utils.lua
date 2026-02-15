@@ -1,10 +1,10 @@
-local utils = {}
+local M = {}
 
-function utils.is_dir(dir)
+function M.is_dir(dir)
     return vim.fn.isdirectory(dir) ~= 0
 end
 
-function utils.plugin_path()
+function M.plugin_path()
     -- Get the current script's path
     local current_file = debug.getinfo(1, "S").source:sub(2)
 
@@ -15,4 +15,4 @@ function utils.plugin_path()
     return vim.fn.fnamemodify(script_dir, ":h:h")
 end
 
-return utils
+return M

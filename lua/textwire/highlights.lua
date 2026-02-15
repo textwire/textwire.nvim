@@ -1,10 +1,10 @@
-local highlights = {}
+local M = {}
 
 local utils = require("textwire.utils")
 
 --- Move highlight files from the plugin directory to the user's config.
 --- @return nil
-function highlights.refresh_files()
+function M.refresh_files()
     local queries_dir = utils.plugin_path() .. "/queries"
     local dest_dir = vim.fn.stdpath("config") .. "/queries/textwire"
 
@@ -28,4 +28,4 @@ function highlights.refresh_files()
     end
 end
 
-return highlights
+return M
