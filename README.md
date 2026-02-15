@@ -25,6 +25,9 @@ return {
 
 After installing the plugin, you can open any Textwire file and write the command `:TSInstall textwire` to install query files.
 
+> [NOTE!]
+> Don't forget to update treesitter with `TSUpdate` from time to time because that's the only way to keep Textwire syntax highlighting up-to-date.
+
 ## Contributing
 
 When you are contributing to this plugin, please make sure that you are running the `cmd/download` bash script that will download LSP binaries and treesitter highlights into `bin` and `queries` directories. You can run it with the following command:
