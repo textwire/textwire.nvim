@@ -3,7 +3,7 @@
 Neovim plugin for Textwire syntax highlighting support.
 
 > [!NOTE]
-> Hopefully support for this parser will be upstreamed by editors soon. At the moment, it must be integrated manually. In the future we'll not need this block when this plugin will be a part Mason. **We need at least 100 ⭐ stars** on [Textwire](https://github.com/textwire/textwire) repository to contribute to Mason
+> Hopefully support for this parser will be upstreamed by editors soon. At the moment, it must be integrated manually. In the future we'll not need this block when this plugin will be a part Mason. **We need at least 100 ⭐ stars** on [Textwire](https://github.com/textwire/textwire) repository to contribute to Mason.
 
 ## Installation
 
@@ -25,7 +25,7 @@ return {
 
 After installing the plugin, you can open any Textwire file and write the command `:TSInstall textwire` to install query files.
 
-> [NOTE!]
+> [!NOTE]
 > Don't forget to update treesitter with `TSUpdate` from time to time because that's the only way to keep Textwire syntax highlighting up-to-date.
 
 ## Contributing
