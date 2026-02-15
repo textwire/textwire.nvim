@@ -44,6 +44,9 @@
 (call_expression
   function: (identifier) @function.method)
 
+(global_call_expression
+  function: (identifier) @function.method)
+
 (dot_expression
   key: (identifier) @property)
 

@@ -1,8 +1,9 @@
 # Release Notes
 
-## v1.2.1 (2026-02-15)
+## v1.3.0 (2026-02-15)
 
 - ✨ Added Textwire file icon when users use `nvim-web-devicons` or `mini.icons` plugin.
+- ✨ Added syntax highlighting for global functions call like `{{ defined(var) }}`
 
 ## v1.2.0 (2026-02-14)
 
