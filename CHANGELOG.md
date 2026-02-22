@@ -1,5 +1,9 @@
 # Release Notes
 
+## v1.4.0 (2026-02-22)
+
+- ✨ Change comment for Textwire to be `{{-- %s --}}` if you trigger comment when your cursor is on Textwire code.
+
 ## v1.3.0 (2026-02-15)
 
 - ✨ Added Textwire file icon when users use `nvim-web-devicons` or `mini.icons` plugin.

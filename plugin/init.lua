@@ -24,3 +24,11 @@ parser_config.textwire = {
 
 require("textwire.icon").set_icon()
 require("textwire.lsp").attach()
+
+-- Change comment for Textwire
+vim.api.nvim_create_autocmd("FileType", {
+    pattern = "textwire",
+    callback = function()
+        vim.bo.commentstring = "{{-- %s --}}"
+    end,
+})
