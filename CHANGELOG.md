@@ -1,5 +1,9 @@
 # Release Notes
 
+## v1.5.0 (2026-02-28)
+
+- ✨ Update queries that add highlight to `@slotif` directive. Also, added higlight to `@breakif` and `@continueif` lowercased.
+
 ## v1.4.0 (2026-02-22)
 
 - ✨ Change comment for Textwire to be `{{-- %s --}}` if you trigger comment when your cursor is on Textwire code.
