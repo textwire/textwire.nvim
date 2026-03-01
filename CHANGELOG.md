@@ -1,5 +1,9 @@
 # Release Notes
 
+## v1.5.1 (2026-03-01)
+
+- ✨ Updated lsp to the latest version.
+
 ## v1.5.0 (2026-02-28)
 
 - ✨ Update queries that add highlight to `@slotif` directive. Also, added higlight to `@breakif` and `@continueif` lowercased.
