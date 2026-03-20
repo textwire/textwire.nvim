@@ -1,5 +1,9 @@
 # Release Notes
 
+## v1.5.2 (2026-03-20)
+
+- ✨ Updated syntax highlighting files.
+
 ## v1.5.1 (2026-03-01)
 
 - ✨ Updated lsp to the latest version.
