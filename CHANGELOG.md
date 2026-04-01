@@ -1,5 +1,9 @@
 # Release Notes
 
+## v1.6.0 (2026-04-01)
+
+- ✨ Added support for Textwire v4.
+
 ## v1.5.2 (2026-03-20)
 
 - ✨ Updated syntax highlighting files.
