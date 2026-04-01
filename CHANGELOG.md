@@ -1,5 +1,9 @@
 # Release Notes
 
+## v1.6.1 (2026-04-01)
+
+- 🧑 Updated LSP to the latest version v0.5.1
+
 ## v1.6.0 (2026-04-01)
 
 - ✨ Added support for Textwire v4.
