@@ -1,5 +1,9 @@
 # Release Notes
 
+## v1.6.2 (2026-06-03)
+
+- 🐛 Fix plugin to support the latest nvim-treesitter version
+
 ## v1.6.1 (2026-04-01)
 
 - 🧑 Updated LSP to the latest version v0.5.1
