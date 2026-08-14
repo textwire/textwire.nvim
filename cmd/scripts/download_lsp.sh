@@ -18,7 +18,7 @@ if [[ "$new_tag" == "$old_tag" ]]; then
     exit 0
 fi
 
-version=("${new_tag#v}")
+version="${new_tag#v}"
 
 echo "✅ New LSP version $version found. Downloading..."
 
