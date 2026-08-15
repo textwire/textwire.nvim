@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-get_json_field_value() {
+get_latest_lsp_version() {
     local url="https://codeberg.org/api/v1/repos/textwire/lsp/tags?limit=1"
     local version
     version="$(curl -s "$url" | jq '.[0].name')"
