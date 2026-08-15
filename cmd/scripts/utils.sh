@@ -4,7 +4,7 @@ set -euo pipefail
 get_latest_lsp_version() {
     local url="https://codeberg.org/api/v1/repos/textwire/lsp/tags?limit=1"
     local version
-    version="$(curl -s "$url" | jq '.[0].name')"
+    version="$(curl -s "$url" | jq -r '.[0].name')"
     echo "$version"
 }
 
