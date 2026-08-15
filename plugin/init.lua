@@ -22,6 +22,7 @@ end
 
 -- Register immediately
 register_textwire()
+vim.notify_once('[textwire.nvim] textwire.nvim moved from GitHub to Codeberg. Change "textwire/textwire.nvim" in your config to the new location "https://codeberg.org/textwire/textwire.nvim" and do the update', vim.log.levels.WARN)
 
 -- Re-register after every parser reload (TSUpdate, TSInstall, etc.)
 vim.api.nvim_create_autocmd("User", {
