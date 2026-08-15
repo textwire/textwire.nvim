@@ -6,11 +6,8 @@ source ./cmd/scripts/utils.sh
 echo "⏰ Checking LSP binary build version..."
 
 DIVIDER="-----------------------------------------------------------------"
-LATEST_RELEASE_URL="https://api.github.com/repos/textwire/lsp/releases/latest"
 
-latest_release=$(curl -s "$LATEST_RELEASE_URL")
-
-new_tag=$(get_json_field_value "$latest_release" "tag_name")
+new_tag=$(get_latest_lsp_version)
 old_tag=$(cat ./bin/.latest-tag)
 
 if [[ "$new_tag" == "$old_tag" ]]; then
@@ -42,7 +39,7 @@ remove_unused_files() {
 for file_name in "${file_names[@]}"; do
     echo "$DIVIDER"
 
-    url="https://github.com/textwire/lsp/releases/download/$new_tag/$file_name"
+    url="https://codeberg.org/textwire/lsp/releases/download/$new_tag/$file_name"
     dest="bin/$file_name"
 
     new_name="textwire_${file_name/${version}_/}"

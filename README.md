@@ -3,7 +3,7 @@
 Neovim plugin for Textwire syntax highlighting support.
 
 > [!NOTE]
-> Hopefully support for this parser will be upstreamed by editors soon. At the moment, it must be integrated manually. In the future we'll not need this block when this plugin will be a part Mason. **We need at least 100 ⭐ stars** on [Textwire](https://github.com/textwire/textwire) repository to contribute to Mason.
+> Hopefully support for this parser will be upstreamed by editors soon. At the moment, it must be integrated manually. In the future we'll not need this block when this plugin will be a part Mason. **We need at least 100 ⭐ stars** on [Textwire](https://codeberg.org/textwire/textwire) repository to contribute to Mason.
 
 ## Installation
 
@@ -11,7 +11,7 @@ Neovim plugin for Textwire syntax highlighting support.
 
 ```lua
 return {
-    "textwire/textwire.nvim",
+    "https://codeberg.org/textwire/textwire.nvim",
     dependencies = {
         "nvim-treesitter/nvim-treesitter",
     },

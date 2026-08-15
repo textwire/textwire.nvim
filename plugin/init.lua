@@ -11,7 +11,7 @@ local function register_textwire()
     local parsers = require("nvim-treesitter.parsers")
     parsers.textwire = {
         install_info = {
-            url = "https://github.com/textwire/tree-sitter-textwire",
+            url = "https://codeberg.org/textwire/tree-sitter-textwire",
             files = { "src/parser.c", "src/scanner.c" },
             branch = "master",
             generate_requires_npm = false,

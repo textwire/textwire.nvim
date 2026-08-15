@@ -6,7 +6,7 @@ file_names=("highlights.scm" "injections.scm")
 echo "⏰ Downloading latest CSM query files..."
 
 for file_name in "${file_names[@]}"; do
-    url="https://raw.githubusercontent.com/textwire/tree-sitter-textwire/refs/heads/master/queries/$file_name"
+    url="https://codeberg.org/textwire/tree-sitter-textwire/raw/branch/master/queries/$file_name"
     dest="queries/$file_name"
 
     # Get the content of the file
