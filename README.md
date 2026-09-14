@@ -28,6 +28,17 @@ After installing the plugin, you can open any Textwire file and write the comman
 > [!NOTE]
 > Don't forget to update treesitter with `TSUpdate` from time to time because that's the only way to keep Textwire syntax highlighting up-to-date.
 
+## Enable Emmet Support
+
+If you use Emmet, you can set it to also apply for Textwire files:
+
+```lua
+vim.lsp.config('emmet_language_server', {
+    filetypes = { 'html', 'textwire' },
+    capabilities = cap,
+})
+```
+
 ## Contributing
 
 When you are contributing to this plugin, please make sure that you are running the `cmd/download` bash script that will download LSP binaries and treesitter highlights into `bin` and `queries` directories. You can run it with the following command:
