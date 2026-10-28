@@ -9,7 +9,7 @@ highlighting.
   :h textwire
 
 textwire.build()                                              *textwire.build()*
-    Fetch recent highlight files from Codeberg and insert them into queries in
+    Fetch recent highlight files from GitHub and insert them into queries in
     your Neovim's directory. Also it will download the LSP binary and install it
     locally to get LSP features for Textwire such as completion and hover.
 

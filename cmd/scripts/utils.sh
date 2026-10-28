@@ -1,11 +1,16 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-get_latest_lsp_version() {
-    local url="https://codeberg.org/api/v1/repos/textwire/lsp/tags?limit=1"
-    local version
-    version="$(curl -s "$url" | jq -r '.[0].name')"
-    echo "$version"
+get_json_field_value() {
+    local json="$1"
+    local key="$2"
+
+    if [[ "$json" =~ \"$key\"[[:space:]]*\:[[:space:]]*\"([^\"]*)\" ]]; then
+        echo "${BASH_REMATCH[1]}"
+    else
+        echo "" >&2
+        return 1
+    fi
 }
 
 show_spinner() {
