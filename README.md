@@ -2,6 +2,9 @@
 
 Neovim plugin for Textwire syntax highlighting support.
 
+> [!IMPORTANT]
+> The project moved to [codeberg.org/textwire/textwire.nvim](https://codeberg.org/textwire/textwire.nvim)!
+
 > [!NOTE]
 > Hopefully support for this parser will be upstreamed by editors soon. At the moment, it must be integrated manually. In the future we'll not need this block when this plugin will be a part Mason. **We need at least 100 ⭐ stars on Codeberg** on [Textwire](https://codeberg.org/textwire/textwire) repository to contribute to Mason.
 
