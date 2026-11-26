@@ -1,5 +1,9 @@
 # Release Notes
 
+## v1.6.4 (2026-11-26)
+
+- 🧑 Updated LSP to the v0.6.1 version.
+
 ## v1.6.3 (2026-11-26)
 
 - 🧑 Updated LSP to the v0.6.0 version.
